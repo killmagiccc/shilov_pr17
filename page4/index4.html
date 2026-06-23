@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="../style_h_f.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Vertex Architects</title>
+</head>
+<body>
+    <header id="home">
+        <img src="img/logo.png" alt="logo">
+        <ul class="menu-header">
+            <li><a href="../page1/index1.html">Home</a></li>
+            <li><a href="../page2/index2.html">About</a></li>
+            <li><a href="../page3/index3.html">Projects</a></li>
+            <li><a href="#home">Service</a></li>
+            <li><a href="../page5/index5.html">Portfolio</a></li>
+            <li><a href="../page6/index6.html">Contact</a></li>
+            <li><a href="../page7/index7.html">Blog</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Our Service</h1>
+            <h2>The full list of our bureau's services</h2>
+        </section>
+
+        <section class="cards fade-item">
+            <div class="card" id="card1">
+                <h3><a href="#card1">Full‑Cycle General Contracting & Turnkey Construction</a></h3>
+                <p class="service">We take full responsibility for your project from the very first site inspection to the final handover. Our team manages all subcontractors, procurement, scheduling, and quality control. You receive a move‑in ready building with a single point of contact, fixed deadlines, and transparent cost reporting.</p>
+            </div>
+            <div class="card" id="card2">
+                <h3><a href="#card2">Architectural Design, BIM Modeling & 3D Visualization</a></h3>
+                <p class="service">We translate your ideas into precise construction documents using advanced BIM (Building Information Modeling) software. Our architects produce detailed floor plans, sections, and facades, while 3D visualisation gives you a photorealistic walkthrough of every interior and exterior space before a single brick is laid.</p>
+            </div>
+            <div class="card" id="card3">
+                <h3><a href="#card3">Comprehensive Renovation & Premium Interior Finishing</a></h3>
+                <p class="service">This service covers the complete transformation of existing spaces. We handle demolition, wall erection, screeding, floor covering, tiling, decorative painting, and custom joinery. Using only high‑end materials, we ensure flawless execution with careful attention to acoustic and thermal insulation.</p>
+            </div>
+            <div class="card" id="card4">
+                <h3><a href="#card4">Engineering Systems Installation (MEP)</a></h3>
+                <p class="service">We design and install all mechanical, electrical, and plumbing systems required for modern buildings. This includes HVAC (heating, ventilation, air conditioning), low‑current networks (data, security), lighting, switchgear, water supply, drainage, and fire protection. All work complies with strict safety and energy‑efficiency standards.</p>
+            </div>
+            <div class="card" id="card5">
+                <h3><a href="#card5">Exterior Cladding, Roofing & Structural Reinforcemen</a>t</h3>
+                <p class="service">Our team restores and protects the building envelope. We offer ventilated facades, natural stone cladding, composite panels, and all types of roofing (flat, pitched, metal, shingle). In addition, we reinforce concrete columns, beams, and steel frameworks to extend the structure’s lifespan and meet updated seismic or load requirements.</p>
+            </div>
+            <div class="card" id="card6">
+                <h3><a href="#card6">Site Preparation, Utility Connections & Landscaping</a></h3>
+                <p class="service">We prepare your land for construction by clearing vegetation, grading the terrain, and excavating foundations. We also arrange official connections to municipal water, sewage, gas, and power grids. Finally, our landscaping team installs paving, retaining walls, irrigation systems, and planting to create a finished outdoor environment.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact</h4>
+            <div class="links">
+                <p>t.me/arendaezhey</p>
+                <p>mmorningg@mail.ru</p>
+                <p>senbonzakyra@mail.ru</p>
+                <p>corporate@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <h4>Menu</h4>
+            <ul class="menu-header">
+                <li><a href="../page1/index1.html">Home</a></li>
+                <li><a href="../page2/index2.html">About</a></li>
+                <li><a href="../page3/index3.html">Projects</a></li>
+                <li><a href="#home">Service</a></li>
+                <li><a href="../page5/index5.html">Portfolio</a></li>
+                <li><a href="../page6/index6.html">Contact</a></li>
+                <li><a href="../page7/index7.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h4>Get in touch</h4>
+            <form>
+                <input type="email" placeholder="your email" required>
+                <button>SEND</button>
+            </form>
+            <p>© 2026 Shilov Maxim | copyright</p>
+        </div>
+    </footer>
+    <script>
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => observer.observe(item));
+    if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+  </script>
+</body>
+</html>
