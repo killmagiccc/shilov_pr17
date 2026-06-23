@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="../style_h_f.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Vertex Architects</title>
+</head>
+<body>
+    <header id="home">
+        <img src="img/logo.png" alt="logo">
+        <ul class="menu-header">
+            <li><a href="#home">Home</a></li>
+            <li><a href="../page2/index2.html">About</a></li>
+            <li><a href="../page3/index3.html">Projects</a></li>
+            <li><a href="../page4/index4.html">Service</a></li>
+            <li><a href="../page5/index5.html">Portfolio</a></li>
+            <li><a href="../page6/index6.html">Contact</a></li>
+            <li><a href="../page7/index7.html">Blog</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Vertex Architects</h1>
+            <h2>Architectural Visualization & 3D Rendering Services for Architects and Developers</h2>
+        </section>
+
+        <section class="description fade-item">
+            <h2>About Us</h2>
+            <p>
+                Vertex Architects is an architectural design service specializing in Interior & Exterior 3D Rendering for Architects & Developers & Real Estate Projects. We deliver creative, modern, and practical architectural solutions, including architectural planning, interior design concepts, photorealistic 3D visualizations, and project consultancy for clients seeking functional, elegant, and visually impressive spaces. Our expertise in Interior & Exterior 3D Rendering for Architects, Developers. helps bring ideas to life with clarity, precision, and modern design presentation.
+            </p>
+            <div class="more">
+                <a href="../page2/index2.html">-MORE-</a> 
+            </div>
+        </section>
+
+        <section class="last-project fade-item">
+            <h2>Last Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>HOME 1</h3>
+                    <img src="img/дом1.png" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 2</h3>
+                    <img src="img/дом2.png" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 3</h3>
+                    <img src="img/дом3.png" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 4</h3>
+                    <img src="img/дом4.png" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 5</h3>
+                    <img src="img/дом5.png" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 6</h3>
+                    <img src="img/дом6.png"" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 7</h3>
+                    <img src="img/дом7.png"" alt="card img">
+                </div>
+                <div class="card">
+                    <h3>HOME 8</h3>
+                    <img src="img/дом8.png"" alt="card img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact</h4>
+            <div class="links">
+                <p>t.me/arendaezhey</p>
+                <p>mmorningg@mail.ru</p>
+                <p>senbonzakyra@mail.ru</p>
+                <p>corporate@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <h4>Menu</h4>
+            <ul class="menu-header">
+                <li><a href="#home">Home</a></li>
+                <li><a href="../page2/index2.html">About</a></li>
+                <li><a href="../page3/index3.html">Projects</a></li>
+                <li><a href="../page4/index4.html">Service</a></li>
+                <li><a href="../page5/index5.html">Portfolio</a></li>
+                <li><a href="../page6/index6.html">Contact</a></li>
+                <li><a href="../page7/index7.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h4>Get in touch</h4>
+            <form>
+                <input type="email" placeholder="your email" required>
+                <button>SEND</button>
+            </form>
+            <p>© 2026 Shilov Maxim | copyright</p>
+        </div>
+    </footer>
+    <script>
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
