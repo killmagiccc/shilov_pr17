@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="../style_h_f.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Vertex Architects</title>
+</head>
+<body>
+    <header id="home">
+        <img src="img/logo.png" alt="logo">
+        <ul class="menu-header">
+            <li><a href="../page1/index1.html">Home</a></li>
+            <li><a href="../page2/index2.html">About</a></li>
+            <li><a href="../page3/index3.html">Projects</a></li>
+            <li><a href="../page4/index4.html">Service</a></li>
+            <li><a href="../page5/index5.html">Portfolio</a></li>
+            <li><a href="#home">Contact</a></li>
+            <li><a href="../page7/index7.html">Blog</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Contacts and Feedback</h1>
+        </section>
+        <section class="form fade-item">
+            <div class="container">
+                <div class="forma">
+                    <h2>Feedback form</h2>
+                    <form class="form">
+                        <div class="form-group">
+                            <label class="txt">Name & Surname</label>
+                            <input class="txt" type="text" id="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="txt">E-mail</label>
+                            <input class="txt" type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="txt">Number Phone</label>
+                            <input class="txt" type="text" id="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="txt">Your Message</label>
+                            <input class="txt" type="text" id="message" required>
+                        </div>
+                        <button type="submit" class="btn"><p>SEND</p></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="karta fade-item">
+            <div class="container">
+                <h2>Location</h2>
+                <div class="map">
+                    <img src="img/карта.png">
+                </div>
+            </div>
+        </section>
+        <section class="requisites fade-item">
+            <div class="container">
+                <h2>Requisites</h2>
+                <p class="txt"><strong>Address:</strong> Moscow, 10 Tverskaya Street, Office 405</p>
+                <p class="txt"><strong>Phone:</strong> +7 (922) 37 17 844</p>
+                <p class="txt"><strong>Address:</strong> Moscow, 10 Tverskaya Street, Office 405</p>
+                <p class="txt"><strong>E-mail:</strong> mmorningg@mail.ru</p>
+                <p class="txt"><strong>Work schedule:</strong> Mon-Fri: 10:00 - 19:00</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact</h4>
+            <div class="links">
+                <p>t.me/arendaezhey</p>
+                <p>mmorningg@mail.ru</p>
+                <p>senbonzakyra@mail.ru</p>
+                <p>corporate@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <h4>Menu</h4>
+            <ul class="menu-header">
+                <li><a href="../page1/index1.html">Home</a></li>
+                <li><a href="../page2/index2.html">About</a></li>
+                <li><a href="../page3/index3.html">Projects</a></li>
+                <li><a href="../page4/index4.html">Service</a></li>
+                <li><a href="../page5/index5.html">Portfolio</a></li>
+                <li><a href="#home">Contact</a></li>
+                <li><a href="../page7/index7.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h4>Get in touch</h4>
+            <form>
+                <input type="email" placeholder="your email" required>
+                <button>SEND</button>
+            </form>
+            <p>© 2026 Shilov Maxim | copyright</p>
+        </div>
+    </footer>
+    <script>
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
