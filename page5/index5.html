@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="../style_h_f.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Vertex Architects</title>
+</head>
+<body>
+    <header id="home">
+        <img src="img/logo.png" alt="logo">
+        <ul class="menu-header">
+            <li><a href="../page1/index1.html">Home</a></li>
+            <li><a href="../page2/index2.html">About</a></li>
+            <li><a href="../page3/index3.html">Projects</a></li>
+            <li><a href="../page4/index4.html">Service</a></li>
+            <li><a href="#home">Portfolio</a></li>
+            <li><a href="../page6/index6.html">Contact</a></li>
+            <li><a href="../page7/index7.html">Blog</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Portfolio</h1>
+            <h2>Our ready-made projects</h2>
+        </section>
+        <section class="portfolio">
+            <div class="container">
+                <input type="radio" name="slider" id="slide1" class="radio-input" checked>
+                <input type="radio" name="slider" id="slide2" class="radio-input">
+                <input type="radio" name="slider" id="slide3" class="radio-input">
+                <input type="radio" name="slider" id="slide4" class="radio-input">
+                <input type="radio" name="slider" id="slide5" class="radio-input">
+                <input type="radio" name="slider" id="slide6" class="radio-input">
+                <input type="radio" name="slider" id="slide7" class="radio-input">
+                <input type="radio" name="slider" id="slide8" class="radio-input">
+                <input type="radio" name="slider" id="slide9" class="radio-input">
+                
+                <div class="slides">
+                    <img src="img/ф1.jpg" alt="Проект 1" class="slide slide1">
+                    <img src="img/ф2.avif" alt="Проект 2" class="slide slide2">
+                    <img src="img/ф3.webp" alt="Проект 3" class="slide slide3">
+                    <img src="img/ф4.jpg" alt="Проект 4" class="slide slide4">
+                    <img src="img/ф5.jpg" alt="Проект 5" class="slide slide5">
+                    <img src="img/ф6.png" alt="Проект 6" class="slide slide6">
+                    <img src="img/ф7.jpg" alt="Проект 7" class="slide slide4">
+                    <img src="img/ф8.jpg" alt="Проект 8" class="slide slide5">
+                    <img src="img/ф9.jpg" alt="Проект 9" class="slide slide6">
+                </div>
+                
+                <div class="mins">
+                    <label for="slide1">
+                    <img src="img/ф1.jpg" alt="Мин 1" class="min">
+                    </label>
+                    <label for="slide2">
+                    <img src="img/ф2.avif" alt="Мин 2" class="min">
+                    </label>
+                    <label for="slide3">
+                    <img src="img/ф3.webp" alt="Мин 3" class="min">
+                    </label>
+                    <label for="slide4">
+                    <img src="img/ф4.jpg" alt="Мин 4" class="min">
+                    </label>
+                    <label for="slide5">
+                    <img src="img/ф5.jpg" alt="Мин 5" class="min">
+                    </label>
+                    <label for="slide6">
+                    <img src="img/ф6.png" alt="Мин 6" class="min">
+                    </label>
+                    </label>
+                    <label for="slide4">
+                    <img src="img/ф7.jpg" alt="Мин 7" class="min">
+                    </label>
+                    <label for="slide5">
+                    <img src="img/ф8.jpg" alt="Мин 8" class="min">
+                    </label>
+                    <label for="slide6">
+                    <img src="img/ф9.jpg" alt="Мин 9" class="min">
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact</h4>
+            <div class="links">
+                <p>t.me/arendaezhey</p>
+                <p>mmorningg@mail.ru</p>
+                <p>senbonzakyra@mail.ru</p>
+                <p>corporate@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <h4>Menu</h4>
+            <ul class="menu-header">
+                <li><a href="../page1/index1.html">Home</a></li>
+                <li><a href="../page2/index2.html">About</a></li>
+                <li><a href="../page3/index3.html">Projects</a></li>
+                <li><a href="../page4/index4.html">Service</a></li>
+                <li><a href="#home">Portfolio</a></li>
+                <li><a href="../page6/index6.html">Contact</a></li>
+                <li><a href="../page7/index7.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h4>Get in touch</h4>
+            <form>
+                <input type="email" placeholder="your email" required>
+                <button>SEND</button>
+            </form>
+            <p>© 2026 Shilov Maxim | copyright</p>
+        </div>
+    </footer>
+    <script>
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+  </script>
+</body>
+</html>
