@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../style_h_f.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Vertex Architects</title>
+</head>
+<body>
+    <header id="home">
+        <img src="img/logo.png" alt="logo">
+        <ul class="menu-header">
+            <li><a href="../page1/index1.html">Home</a></li>
+            <li><a href="../page2/index2.html">About</a></li>
+            <li><a href="#home">Projects</a></li>
+            <li><a href="../page4/index4.html">Service</a></li>
+            <li><a href="../page5/index5.html">Portfolio</a></li>
+            <li><a href="../page6/index6.html">Contact</a></li>
+            <li><a href="../page7/index7.html">Blog</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Our Projects</h1>
+            <h2>Residential, commercial and public projects</h2>
+        </section>
+
+        <section class="filters fade-item">
+            <div class="filter">
+                <input type="radio" name="filtr" id="all" value="all">
+                <label for="All">All</label>
+                <input type="radio" name="filtr" id="residential" value="residential">
+                <label for="Residential">Residential</label>
+                <input type="radio" name="filtr" id="commercial" value="commercial">
+                <label for="Commercial">Commercial</label>
+                <input type="radio" name="filtr" id="public_projects" value="public_projects">
+                <label for="Public projects">Public projects</label>
+                <div class="grid">
+                    <div class="cards">
+                        <div class="card residential">
+                            <h3>Home Parusa</h3>
+                            <img src="img/дом1.jpg" alt="card img">
+                        </div>
+                        <div class="card residential">
+                            <h3>Ingrasiya</h3>
+                            <img src="img/дом2.webp" alt="card img">
+                        </div>
+                        <div class="card residential">
+                            <h3>Abyss</h3>
+                            <img src="img/дом3.jpg" alt="card img">
+                        </div>
+                        <div class="card commercial">
+                            <h3>Arasaka Tower</h3>
+                            <img src="img/арасака.jpg" alt="card img">
+                        </div>
+                        <div class="card commercial">
+                            <h3>Restoraunt Ratatui</h3>
+                            <img src="img/ресторан.jpg" alt="card img">
+                        </div>
+                        <div class="card commercial">
+                            <h3>Gazprom Tower</h3>
+                            <img src="img/газпромтауер.jpg" alt="card img">
+                        </div>
+                        <div class="card public_projects">
+                            <h3>School in Nytva</h3>
+                            <img src="img/школа1.jpg" alt="card img">
+                        </div>
+                        <div class="card public_projects">
+                            <h3>School in Perm</h3>
+                            <img src="img/школа2.webp" alt="card img">
+                        </div>
+                        <div class="card public_projects">
+                            <h3>Clinic</h3>
+                            <img src="img/больница.jpg" alt="card img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h4>Contact</h4>
+            <div class="links">
+                <p>t.me/arendaezhey</p>
+                <p>mmorningg@mail.ru</p>
+                <p>senbonzakyra@mail.ru</p>
+                <p>corporate@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="menu-footer">
+            <h4>Menu</h4>
+            <ul class="menu-header">
+                <li><a href="../page1/index1.html">Home</a></li>
+                <li><a href="../page2/index2.html">About</a></li>
+                <li><a href="#home">Projects</a></li>
+                <li><a href="../page4/index4.html">Service</a></li>
+                <li><a href="../page5/index5.html">Portfolio</a></li>
+                <li><a href="../page6/index6.html">Contact</a></li>
+                <li><a href="../page7/index7.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-us">
+            <h4>Get in touch</h4>
+            <form>
+                <input type="email" placeholder="your email" required>
+                <button>SEND</button>
+            </form>
+            <p>© 2026 Shilov Maxim | copyright</p>
+        </div>
+    </footer>
+    <script>
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>

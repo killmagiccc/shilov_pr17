@@ -1,0 +1,188 @@
+main{
+    text-align: center;
+    .hero{
+        background-image: url(img/фон.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 92vw;
+        padding: 220px 0;
+        margin: 0 auto 50px auto;
+        h1, h2{
+            color: #ffffff;
+        }
+        h2{
+            font-weight: 300;
+            margin: 30px 0 0 0;
+            padding: 0 120px;
+        }
+    }
+#residential:checked ~ .grid .card.commercial, 
+#residential:checked ~ .grid .card.public_projects {
+    display: none;
+}
+#commercial:checked ~ .grid .card.residential, 
+#commercial:checked ~ .grid .card.public_projects {
+    display: none;
+}
+#public_projects:checked ~ .grid .card.commercial, 
+#public_projects:checked ~ .grid .card.residential {
+    display: none;
+}
+#all:checked ~ .grid .card {
+  display: block;
+}
+    .filters{
+        margin: 0 50px;
+        padding: 40px 0 0 0;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 8px 40px rgba(255, 255, 255, 0.6);
+        input[type="radio"]{
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: #ffd166 3px solid;
+            border-radius: 100px;
+            cursor: pointer;
+            vertical-align:-4px;
+            margin: 0 5px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+        }
+        input[type="radio"]:checked{
+            background-color: #00a896;
+            border: none;
+        }
+        label{
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 60px 0;
+        .card{
+            background-color: #1a1a1a;
+            transition: transform  0.3s ease-in-out, background-color 0.3s ease-in-out;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            margin: 25px 20px 0 20px;
+            border-radius: 5px;
+            img{
+                transition: transform 0.3s ease-in-out;
+                width: 100%;
+                height: auto;
+            }
+
+            h3{
+                color: #ffffff;
+                padding: 10px 0;
+                font-size: 20px;
+                font-weight: 300;
+                font-family: inter;
+                transition: color 0.3s ease-in-out;
+            }
+        }
+        .card:hover{
+            transform: scale(1.1);
+            background-color: #ffd166;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            h3{
+                color: #000000;
+                transition: color 0.3s ease-in-out;
+            }
+            img{
+                transform: scale(1.1) translateY(20px);
+                transition: transform 0.3s ease-in-out;
+                box-shadow: 0 6px 200px rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .filters {
+        margin: 0 15px !important;
+        padding: 20px 10px 0 10px !important;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+    }
+    .filters .filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 15px;
+    }
+    .filters input[type="radio"] {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+        flex-shrink: 0;
+    }
+    .filters label {
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        padding: 4px 0;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+        padding: 30px 10px !important;
+    }
+    .card {
+        margin: 0 !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .card:hover {
+        transform: scale(1.02) !important;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card h3 {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+    footer {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 25px;
+        padding: 20px 10px 30px;
+    }
+    footer .contact,
+    footer .menu-footer,
+    footer .contact-us {
+        margin: 0 auto;
+    }
+    footer h4 {
+        font-size: 26px;
+    }
+    footer ul.menu-header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+    }
+    footer ul.menu-header li {
+        display: block;
+    }
+    footer ul.menu-header li a {
+        font-size: 18px;
+    }
+    footer form input {
+        width: 80%;
+        margin: 0 auto 10px;
+        display: block;
+        padding: 8px;
+        font-size: 16px;
+    }
+    footer form button {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    footer .links p {
+        line-height: 1.8;
+    }
+}
